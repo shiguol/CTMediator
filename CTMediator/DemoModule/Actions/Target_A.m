@@ -15,52 +15,52 @@ typedef void (^CTUrlRouterCallbackBlock)(NSDictionary *info);
 
 - (UIViewController *)Action_nativeFetchDetailViewController:(NSDictionary *)params
 {
-    // 因为action是从属于ModuleA的，所以action直接可以使用ModuleA里的所有声明
-    DemoModuleADetailViewController *viewController = [[DemoModuleADetailViewController alloc] init];
-    viewController.valueLabel.text = params[@"key"];
-    return viewController;
+  // 因为 action 是属于 ModuleA 的，所以 action 直接可以使用 ModuleA 里的所有声明
+  DemoModuleADetailViewController *viewController = [[DemoModuleADetailViewController alloc] init];
+  viewController.valueLabel.text = params[@"key"];
+  return viewController;
 }
 
 - (id)Action_nativePresentImage:(NSDictionary *)params
 {
-    DemoModuleADetailViewController *viewController = [[DemoModuleADetailViewController alloc] init];
-    viewController.valueLabel.text = @"this is image";
-    viewController.imageView.image = params[@"image"];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController animated:YES completion:nil];
-    return nil;
+  DemoModuleADetailViewController *viewController = [[DemoModuleADetailViewController alloc] init];
+  viewController.valueLabel.text = @"this is image";
+  viewController.imageView.image = params[@"image"];
+  [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController animated:YES completion:nil];
+  return nil;
 }
 
 - (id)Action_showAlert:(NSDictionary *)params
 {
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        CTUrlRouterCallbackBlock callback = params[@"cancelAction"];
-        if (callback) {
-            callback(@{@"alertAction":action});
-        }
-    }];
-    
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        CTUrlRouterCallbackBlock callback = params[@"confirmAction"];
-        if (callback) {
-            callback(@{@"alertAction":action});
-        }
-    }];
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"alert from Module A" message:params[@"message"] preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:cancelAction];
-    [alertController addAction:confirmAction];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
-    return nil;
+  UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    CTUrlRouterCallbackBlock callback = params[@"cancelAction"];
+    if (callback) {
+      callback(@{@"alertAction":action});
+    }
+  }];
+  
+  UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    CTUrlRouterCallbackBlock callback = params[@"confirmAction"];
+    if (callback) {
+      callback(@{@"alertAction":action});
+    }
+  }];
+  
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"alert from Module A" message:params[@"message"] preferredStyle:UIAlertControllerStyleAlert];
+  [alertController addAction:cancelAction];
+  [alertController addAction:confirmAction];
+  [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+  return nil;
 }
 
 - (id)Action_nativeNoImage:(NSDictionary *)params
 {
-    DemoModuleADetailViewController *viewController = [[DemoModuleADetailViewController alloc] init];
-    viewController.valueLabel.text = @"no image";
-    viewController.imageView.image = [UIImage imageNamed:@"noImage"];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController animated:YES completion:nil];
-    
-    return nil;
+  DemoModuleADetailViewController *viewController = [[DemoModuleADetailViewController alloc] init];
+  viewController.valueLabel.text = @"no image";
+  viewController.imageView.image = [UIImage imageNamed:@"noImage"];
+  [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController animated:YES completion:nil];
+  
+  return nil;
 }
 
 @end
