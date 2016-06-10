@@ -14,10 +14,10 @@
 		4A5CE50A1C9531C9006AEDB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5CE5091C9531C9006AEDB9 /* Assets.xcassets */; };
 		4A5CE50D1C9531C9006AEDB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5CE50B1C9531C9006AEDB9 /* LaunchScreen.storyboard */; };
 		4A5CE51A1C95322F006AEDB9 /* CTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE5191C95322F006AEDB9 /* CTMediator.m */; };
-		4A5CE51D1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE51C1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.m */; };
 		4A5CE5251C953D7D006AEDB9 /* DemoModuleADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE5241C953D7D006AEDB9 /* DemoModuleADetailViewController.m */; };
-		4A5CE52B1C9547B2006AEDB9 /* Target_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE52A1C9547B2006AEDB9 /* Target_A.m */; };
+		4A5CE52B1C9547B2006AEDB9 /* Target_DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE52A1C9547B2006AEDB9 /* Target_DetailVC.m */; };
 		6A1C7FA419878A7AFA10DB7C /* libPods-CTMediator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDD4389F5AEA1D8F6AA0C9F /* libPods-CTMediator.a */; };
+		FA2F4BD51D0AAC1E005D7246 /* CTMediator+CTMediatorModuleDetailActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE51C1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleDetailActions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +35,12 @@
 		4A5CE50E1C9531C9006AEDB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A5CE5181C95322F006AEDB9 /* CTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMediator.h; sourceTree = "<group>"; };
 		4A5CE5191C95322F006AEDB9 /* CTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMediator.m; sourceTree = "<group>"; };
-		4A5CE51B1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorModuleAActions.h"; sourceTree = "<group>"; };
-		4A5CE51C1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorModuleAActions.m"; sourceTree = "<group>"; };
+		4A5CE51B1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleDetailActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorModuleDetailActions.h"; sourceTree = "<group>"; };
+		4A5CE51C1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleDetailActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorModuleDetailActions.m"; sourceTree = "<group>"; };
 		4A5CE5231C953D7D006AEDB9 /* DemoModuleADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModuleADetailViewController.h; sourceTree = "<group>"; };
 		4A5CE5241C953D7D006AEDB9 /* DemoModuleADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModuleADetailViewController.m; sourceTree = "<group>"; };
-		4A5CE5291C9547B2006AEDB9 /* Target_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_A.h; sourceTree = "<group>"; };
-		4A5CE52A1C9547B2006AEDB9 /* Target_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_A.m; sourceTree = "<group>"; };
+		4A5CE5291C9547B2006AEDB9 /* Target_DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_DetailVC.h; sourceTree = "<group>"; };
+		4A5CE52A1C9547B2006AEDB9 /* Target_DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_DetailVC.m; sourceTree = "<group>"; };
 		E9C114EF1101F17773DD4798 /* Pods-CTMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTMediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,18 +113,18 @@
 		4A5CE5151C95320F006AEDB9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				4A5CE5161C95320F006AEDB9 /* ModuleA */,
+				4A5CE5161C95320F006AEDB9 /* ModuleTargetDetail */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		4A5CE5161C95320F006AEDB9 /* ModuleA */ = {
+		4A5CE5161C95320F006AEDB9 /* ModuleTargetDetail */ = {
 			isa = PBXGroup;
 			children = (
-				4A5CE51B1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.h */,
-				4A5CE51C1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.m */,
+				4A5CE51B1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleDetailActions.h */,
+				4A5CE51C1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleDetailActions.m */,
 			);
-			path = ModuleA;
+			path = ModuleTargetDetail;
 			sourceTree = "<group>";
 		};
 		4A5CE5211C953D5A006AEDB9 /* DemoModule */ = {
@@ -140,8 +140,8 @@
 		4A5CE5221C953D5A006AEDB9 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				4A5CE5291C9547B2006AEDB9 /* Target_A.h */,
-				4A5CE52A1C9547B2006AEDB9 /* Target_A.m */,
+				4A5CE5291C9547B2006AEDB9 /* Target_DetailVC.h */,
+				4A5CE52A1C9547B2006AEDB9 /* Target_DetailVC.m */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -284,13 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5CE51D1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.m in Sources */,
+				FA2F4BD51D0AAC1E005D7246 /* CTMediator+CTMediatorModuleDetailActions.m in Sources */,
 				4A5CE5051C9531C9006AEDB9 /* ViewController.m in Sources */,
 				4A5CE5021C9531C9006AEDB9 /* AppDelegate.m in Sources */,
 				4A5CE4FF1C9531C9006AEDB9 /* main.m in Sources */,
 				4A5CE5251C953D7D006AEDB9 /* DemoModuleADetailViewController.m in Sources */,
 				4A5CE51A1C95322F006AEDB9 /* CTMediator.m in Sources */,
-				4A5CE52B1C9547B2006AEDB9 /* Target_A.m in Sources */,
+				4A5CE52B1C9547B2006AEDB9 /* Target_DetailVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

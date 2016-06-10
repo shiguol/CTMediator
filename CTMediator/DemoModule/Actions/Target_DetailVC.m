@@ -1,17 +1,17 @@
 //
-//  Target_A.m
+//  Target_DetailVC.m
 //  CTMediator
 //
 //  Created by casa on 16/3/13.
 //  Copyright © 2016年 casa. All rights reserved.
 //
 
-#import "Target_A.h"
+#import "Target_DetailVC.h"
 #import "DemoModuleADetailViewController.h"
 
 typedef void (^CTUrlRouterCallbackBlock)(NSDictionary *info);
 
-@implementation Target_A
+@implementation Target_DetailVC
 
 - (UIViewController *)Action_nativeFetchDetailViewController:(NSDictionary *)params
 {

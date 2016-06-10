@@ -1,5 +1,5 @@
 //
-//  Target_A.h
+//  Target_DetailVC.h
 //  CTMediator
 //
 //  Created by casa on 16/3/13.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface Target_A : NSObject
+@interface Target_DetailVC : NSObject
 
 - (UIViewController *)Action_nativeFetchDetailViewController:(NSDictionary *)params;
 
